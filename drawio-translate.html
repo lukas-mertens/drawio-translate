@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Draw.io Translator</title>
+
+    <!-- Include the Bulma CSS framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Draw.io Translator</h1>
+
+        <div class="card mb-5">
+          <header class="card-header">
+            <p class="card-header-title">
+              Instructions
+            </p>
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              To use this tool, go to <b>Extras => Edit Diagram...</b> and copy the XML into the source xml box. Then paste back the resulting xml. The diagram should be translated now.
+            </div>
+          </div>
+        </div>
+
+        <form>
+          <div class="field">
+            <label class="label" for="sourceXml">Source XML</label>
+            <div class="control">
+              <textarea class="textarea" id="sourceXml" rows="10"></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label" for="sourceLang">Source Language</label>
+            <div class="control">
+              <div class="select">
+                <select id="sourceLang">
+                  <!-- Add options for source languages here -->
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label" for="targetLang">Target Language</label>
+            <div class="control">
+              <div class="select">
+                <select id="targetLang">
+                  <!-- Add options for target languages here -->
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label" for="apiKey">DeepL API Key</label>
+            <div class="control">
+              <input class="input" type="text" id="apiKey" placeholder="Enter your DeepL API key" onchange="setApiKeyFromInput()">
+            </div>
+            <p class="help is-danger" id="api-key-warning" style="display: none;">Please enter a DeepL API-Key first!</p>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <button type="button" class="button is-primary" id="translateBtn">Translate</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="field">
+          <label class="label" for="resultXml">Result XML</label>
+          <div class="control">
+            <textarea class="textarea" id="resultXml" rows="10" readonly></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add the JS script tag here with placeholders for the missing functionality -->
+    <script src="script.js"></script>
+  </body>
+</html>
